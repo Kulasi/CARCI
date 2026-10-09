@@ -1,0 +1,12 @@
+# Upper bounds guard against breaking API changes in minor releases.
+# streamlit is held below 2.0 because `use_container_width` is deprecated there
+# and `plotly_chart` has no `width` parameter in the >=1.37 range this supports.
+streamlit>=1.37,<2.0
+pandas>=2.2,<3.0
+numpy>=1.26,<3.0
+scikit-learn>=1.5,<2.0
+plotly>=5.22,<7.0
+shap>=0.46,<1.0
+
+# Testing only: pip install -r requirements.txt then `python -m pytest tests/`
+pytest>=8.0,<9.0
